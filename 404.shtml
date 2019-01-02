@@ -1,0 +1,11 @@
+<?php
+$response = http_response_code();
+if($response==404){
+	$actual_url = "https://".$_SERVER['HTTP_HOST']."/regi".$_SERVER['REQUEST_URI'];
+	header("Location:".$actual_url);
+}
+echo $response."<br>";
+$https="https://";
+$actual_url = $https.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+echo $actual_url;
+?>
